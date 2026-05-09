@@ -60,7 +60,7 @@ const About = () => {
             {/* Main Image */}
             <motion.div
               style={{ scale }}
-              className="relative aspect-[3/4] rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-white/5 bg-zinc-900 group-hover:border-purple-500/30 transition-all duration-700 shadow-2xl"
+              className="relative aspect-[3/4] rounded-[1rem] md:rounded-[3rem] overflow-hidden border border-white/5 bg-zinc-900 group-hover:border-purple-500/30 transition-all duration-700 shadow-2xl"
             >
               <Image
                 src={AboutImg}
@@ -76,10 +76,10 @@ const About = () => {
               {/* Floating Card */}
               <motion.div
                 style={{ y }}
-                className="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:right-8 glass-morphism p-4 md:p-6 rounded-[1.5rem] md:rounded-[2rem] border border-white/10 neon-glow-purple backdrop-blur-2xl z-10"
+                className="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:right-8 glass-morphism p-4 md:p-6 rounded-[1rem] md:rounded-[2rem] border border-white/10 neon-glow-purple backdrop-blur-2xl z-10"
               >
                 <p className="text-[9px] md:text-[10px] font-black tracking-[0.3em] md:tracking-[0.4em] text-purple-400 mb-2 uppercase">
-                  SOFTWARE ENGINEER
+                  WEB-DEVOLOPER
                 </p>
 
                 <h3 className="text-2xl md:text-3xl font-black text-white tracking-tighter">
@@ -106,7 +106,7 @@ const About = () => {
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
                 onError={(e) => {
                   e.target.src =
-                    "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop";
+                    "https://i.ibb.co.com/rYYXkQh/Whats-App-Image-2026-05-09-at-5-54-36-PM.jpg";
                 }}
               />
             </motion.div>
