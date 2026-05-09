@@ -36,7 +36,7 @@ const Projects = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 gap-8">
           <div className="max-w-2xl">
             <p className="text-purple-500 font-mono tracking-[0.4em] uppercase text-xs mb-6">SELECTED WORKS</p>
-            <h2 className="text-5xl md:text-8xl font-black text-white tracking-tighter leading-none">
+            <h2 className="text-4xl md:text-8xl font-black text-white tracking-tighter leading-none">
               AWWWARDS <br />
               <span className="text-gradient">WORTHY.</span>
             </h2>
