@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-neon: #a855f7; /* Purple */
+  --secondary-neon: #3b82f6; /* Blue */
+  --bg-dark: #000000;
+  --glass-border: rgba(168, 85, 247, 0.1);
+  --glass-bg: rgba(10, 10, 10, 0.7);
+}
+
+@layer base {
+  body {
+    @apply bg-black text-gray-300 font-sans selection:bg-purple-500 selection:text-white overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-white font-bold tracking-tighter;
+  }
+}
+
+@layer components {
+  .noise-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.03;
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  }
+
+  .glass-morphism {
+    @apply backdrop-blur-xl bg-opacity-70 border border-white/10;
+    background: var(--glass-bg);
+  }
+
+  .neon-glow-purple {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.2), 0 0 40px rgba(168, 85, 247, 0.1);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-purple-600;
+  }
+
+  .animated-grid {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(168, 85, 247, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(168, 85, 247, 0.05) 1px, transparent 1px);
+    mask-image: radial-gradient(circle at center, black, transparent 80%);
+  }
+
+  .magnetic-button {
+    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .blob {
+    @apply absolute rounded-full mix-blend-screen filter blur-[80px] opacity-20 animate-pulse;
+  }
+
+  .container {
+    @apply mx-auto w-[96%] lg:w-[80%] max-w-[1920px] !important;
+  }
+}
+
+/* Lenis CSS */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-neon);
+}
